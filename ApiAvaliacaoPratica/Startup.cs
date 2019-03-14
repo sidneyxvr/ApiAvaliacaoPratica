@@ -32,7 +32,7 @@ namespace ApiAvaliacaoPratica
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ApiContext context)
         {
             if (env.IsDevelopment())
             {
@@ -42,7 +42,10 @@ namespace ApiAvaliacaoPratica
             {
                 app.UseHsts();
             }
+            Initialize.DbInitialize(context);
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
             app.UseMvc();
         }

@@ -10,7 +10,7 @@ namespace ApiAvaliacaoPratica.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cnpj { get; set; }
-        public string InscricaoEstaudal { get; set; }
+        public string InscricaoEstadual { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
     }

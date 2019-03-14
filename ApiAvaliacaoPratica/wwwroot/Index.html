@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+</head>
+<body>
+    <form action="javascript:void(0);" method="POST" onsubmit="add()">
+        <input type="hidden" id="edit-id">
+        <input type="text" id="add-nome" placeholder="Nome" required><br />
+        <input type="text" id="add-cnpj" placeholder="Cnpj"><br />
+        <input type="text" id="add-inscricao-estadual" placeholder="Inscrição Estadual"><br />
+        <input type="number" id="add-latitude" placeholder="Latitude" required><br />
+        <input type="number" id="add-longitude" placeholder="Longitude" required><br />
+        <input type="submit" value="Salvar">
+    </form>
+
+    <br /><br />
+
+
+    <div id="carregar-dados">
+        <table>
+            <tr>
+                <th>Nome |</th>
+                <th>Cnpj |</th>
+                <th>Inscrição Estadual |</th>
+                <th>Latitude |</th>
+                <th>Longitude</th>
+            </tr>
+            <tbody id="get-item"></tbody>
+        </table>
+    </div>
+
+    <div id="editar-transportadora">
+        <form class="my-form">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-nome"><br />
+            <input type="text" id="edit-cnpj" placeholder="Cnpj"><br />
+            <input type="text" id="edit-inscricao-estadual" placeholder="Inscrição Estadual"><br />
+            <input type="number" id="edit-latitude" placeholder="Latitude"><br />
+            <input type="number" id="edit-longitude" placeholder="Longitude"><br />
+            <input type="submit" value="Salvar">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            crossorigin="anonymous"></script>
+    <script src="site.js"></script>
+</body>
+</html>
